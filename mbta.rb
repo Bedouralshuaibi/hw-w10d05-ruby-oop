@@ -7,10 +7,10 @@
   end
 
    # One line, all the stations on that line
-   class Line
-    attr_accessor :name , :stations
-    def initialize(name, stations)
-     @name = name
+   class Line < Station
+    attr_accessor :line_color , :stations
+    def initialize(line_color, stations)
+     @line_color = line_color
      @stations = stations.map { |station_name| Station.new(station_name) }
   
    end
